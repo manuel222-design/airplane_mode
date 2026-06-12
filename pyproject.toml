@@ -3,7 +3,7 @@ name = "airplane_mode"
 authors = [
     { name = "Mashuhuri Engineers", email = "koriremmanuel562@gmail.com"}
 ]
-description = "Flight Ticket Management System\"
+description = "Flight Ticket Management System"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
