@@ -19,7 +19,8 @@
   "status",
   "flight_price",
   "total_amount",
-  "seat"
+  "seat",
+  "add_ons"
  ],
  "fields": [
   {
@@ -134,13 +135,19 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add Ons",
+   "options": "Airplane Ticket Add-on Item"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-10 16:10:53.956461",
+ "modified": "2026-06-11 14:42:49.956372",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

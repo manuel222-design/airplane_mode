@@ -2,8 +2,9 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.model.document import Document
-
+from frappe.model.document import Document # type: ignore
 
 class AirplaneFlight(Document):
-	pass
+
+    def on_submit(self):
+        self.db_set("status", "Completed")
