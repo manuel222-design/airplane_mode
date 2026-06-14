@@ -1,10 +1,6 @@
-# Copyright (c) 2026, Mashuhuri Engineers and contributors
-# For license information, please see license.txt
+from frappe.website.website_generator import WebsiteGenerator
 
-# import frappe
-from frappe.model.document import Document # type: ignore
-
-class AirplaneFlight(Document):
+class AirplaneFlight(WebsiteGenerator):
 
     def on_submit(self):
         self.db_set("status", "Completed")
