@@ -1,7 +1,14 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
+
+<h1>{{ doc.airplane }}</h1>
+
+<p>Flight: {{ doc.name }}</p>
+
+<p>
+    {{ (doc.duration // 3600)|int }}h {{ ((doc.duration % 3600) // 60)|int }}m
+</p>
+
 {% endblock %}
 
-<!-- this is a sample default web page template -->

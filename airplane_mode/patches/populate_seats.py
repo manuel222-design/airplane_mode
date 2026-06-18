@@ -2,14 +2,19 @@ import frappe
 import random
 
 def execute():
-    tickets = frappe.get_all("Airplane Ticket", fields=["name"])
+    tickets = frappe.get_all(
+        "Airplane Ticket",
+        fields=["name", "seat"]
+    )
 
     for ticket in tickets:
-        doc = frappe.get_doc("Airplane Ticket", ticket.name)
-
-        if not doc.seat:
+        if not ticket.seat:
             seat_number = random.randint(1, 99)
             seat_letter = random.choice(["A", "B", "C", "D", "E"])
 
-            doc.seat = f"{seat_number}{seat_letter}"
-            doc.save()
+            frappe.db.set_value(
+                "Airplane Ticket",
+                ticket.name,
+                "seat",
+                f"{seat_number}{seat_letter}"
+            )
